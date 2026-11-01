@@ -1,6 +1,6 @@
 # yahoo-fantasy
 
-Yahoo Fantasy Football matchup recaps are bad. They do not understand how a matchup progressed through time, managerial decision-making context, and team performance relative to the rest of the league. They also read formulaicly.
+Yahoo Fantasy Football matchup recaps are bad. They do not understand how a matchup progressed through time, managerial decision-making context, and team performance relative to the rest of the league. They also read formulaically.
 
 This repository generates better fantasy football matchup recaps for a Yahoo Fantasy Football league. It pulls rosters and scores from Yahoo,
 rebuilds every scoring play from nflverse play-by-play under the league's scoring rules, and gives an LLM
