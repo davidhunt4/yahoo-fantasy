@@ -1,0 +1,8 @@
+.env
+token.json
+.venv/
+__pycache__/
+validation.pkl
+projections/
+timeline_*
+recaps/

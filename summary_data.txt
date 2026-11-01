@@ -1,0 +1,26 @@
+What data to include in the summary:
+    - final score
+    - player final points and player projected points
+    - records before and after
+    - how the team performed relative to projection
+    - where the teams land in the standings now, and their records before and after
+    - how the teams performed relative to rest of league (determines whether it is a slugfest or a slog)
+    - a way to capture how the matchup progressed (needs to be digestible by the llm generating summary)
+        - every instance of points being scored (called an "activity" for these purposes), stored sequentially. So Patrick Mahomes might score 4 points
+        followed by James Cook scoring 2, followed by etc. etc.
+        - if a player in the matchup has consecutive activities with no other players with an activity in between,
+        these activities will be combined into one by summing the scores
+            - the only exception to this is if a player's consecutive activities have different signed point values (one positive one negative)
+        - each activity should have the following stored: 
+            - the player involved in the activity
+            - the point value associated with the activity
+            - which team the activity scored for
+            - the matchup's score following the activity
+            - if the activity resulted in a lead change
+            - what time and day of the week the activity took place
+            - which NFL slot the game took place in (TNF, Sunday noon, Sunday afternoon, Sunday night, Monday night, other - like Sunday morning london or something)
+        - ideally, this will allow the LLM to identify key moments in the matchup, or identify unique parts of the matchup (lots of lead changes, complete dominance by one team, a team being carried by a player)
+    - managerial decisions pre-matchup (or mid-matchup):
+        - if either of the teams started someone injured or on bye
+        - what waiver / free agent decisions they made
+        - if they switched anybody on or off their roster during the matchup
