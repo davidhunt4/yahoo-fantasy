@@ -1,0 +1,1 @@
+Put recaps you like here as .txt or .md files (one per file). They are added to the system prompt as tone and style examples; their underlying data is not shown, so the model learns voice and structure but not facts. Two or three good ones work best. If this folder only contains this README, none are used.
